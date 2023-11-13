@@ -1,0 +1,62 @@
+
+{
+    "PSF_FILE": "test_data/phosphod_bound_to_pure_popc.old.psf",
+    "_PSF_FILE_note": "filename of a PSF file ",
+
+
+    "DCD_FILE": [
+        "test_data/100frames.dcd"
+    ],
+    "_DCD_FILE_note": [
+        "filename of one or multiple DCD files", 
+        "MUST separate with comma if more than one DCDs",
+        "Trajectories from multiple DCDs will be connected sequentially and re-indexed as a single trajectory"
+    ],
+
+
+    "RESIDUE_FILE": "test_data/hydroph_candidates.txt",
+    "_RES_DUE_FILE_note": "filename of a residue list file",
+
+    "hbond_lipids": ["POPC", "POPE", "POPI", "POPS", "CHL1", "PSM", "SAPI24"],
+    "_hbond_lipids_note": "list of lipid types that will be used in hbond analysis",
+
+    "hydrophobic_lipids": ["POPC", "POPE", "POPI", "POPS", "CER180", "CHL1"],
+    "_hydrophobic_lipids_note": "list of lipid types that will be used in hydrophobic analysis",
+
+    "cation_pi_lipids": ["POPC", "POPE", "POPS", "CER180"], 
+    "_cation_pi_lipids_note": "list of lipid types that will be used in cation pi analysis",
+   
+
+    "lifetime": 2, 
+    "_lifetime_note": "number of consecutive frames for a valid contact", 
+
+
+    "mem_limit": 32,
+    "_mem_limit_note": [
+        "Approximate upper-bound of memory limitation, Unit: GB",
+        "Set this option when running on a server where a user's program is not allowed to occupy too much memory",
+        "Suggested value: 1 or 2 GB per thread used",
+        "Only needed for hydrophobic analysis"
+    ],
+
+
+    "start": 0,
+    "stop": null, 
+    "step": 1,
+    "_start_stop_step_note": [
+        "This set of trajectory slicing parameters uses a native Python slicing style (0-indexing)",
+        "These default values (0, null, 1) are for selecting ALL frames",
+        "Examples: for a 1000-frame trajectory,",
+        "1. select the frist 100 frames:  start=0, stop=100, step=1",
+        "2. select every other frame in a segment from the 101st to 200th: start=100, stop=200, step=2"
+    ],
+    
+
+    "output_file_prefix": "",
+    "_output_file_prefixe_note": [
+        "Name(prefix) of the output file IF detailed information of each contact is desired to output",
+        "Leave it empty(double quoted) if no output needed",
+        "NOTE: the frame index in the output is 1-indexing"
+    ] 
+
+}

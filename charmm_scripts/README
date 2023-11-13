@@ -1,0 +1,47 @@
+# Hydrophobic contact
+
+Usage: ./hydroph_prot_memb.sh [nb. of DCD file] #here the nb. of DCD file is 1
+
+In this example:
+- DCD file: output/phospho_d_oure_popc_read.DCD
+- PSF: phospho_d_oure_popc.psf
+- CRD : phospho_d_oure_popc.crd
+
+All the CHARMM output is on the folder : /net/orinoco/reuter_group_repository/methods/md/phosphoD_template_dandan/out
+
+This script will use the file "hydroph_candidates" to know the candidate residues.
+If you want more or less candidates, you can modify this file.
+
+
+output: BIGAVERAGE_hydr.phospho_d_pure_popc_read.dcd
+
+# Hbond
+Usage: ./hbonds_prot_memb.sh [nb. of DCD file] #here the nb. of DCD file is 1
+
+In this example:
+- DCD file: output/phospho_d_oure_popc_read.DCD
+- PSF: phospho_d_oure_popc.psf
+- CRD : phospho_d_oure_popc.crd
+
+All the CHARMM output is on the folder : /net/orinoco/reuter_group_repository/methods/md/phosphoD_template_dandan/out
+
+This script will use the file "hbonds_candidates" to know the candidate residues.
+If you want more or less candidates, you can modify this file.
+
+output: BIGAVERAGE.phospho_d_pure_popc_read.dcd
+
+# cation-pi
+Usage: ./cation_pi.sh
+
+
+In this example:
+- DCD file: output/phospho_d_oure_popc_read.DCD
+- PSF: phospho_d_oure_popc.psf
+- CRD : phospho_d_oure_popc.crd
+
+All the CHARMM output is on the folder : /net/orinoco/reuter_group_repository/methods/md/phosphoD_template_dandan/out
+
+This script will use the file "cation_pi.candidates" to know the candidate residues.
+If you want more or less candidates, you can modify this file.
+
+output: cation_pi.dat2

@@ -1,0 +1,81 @@
+============ ./cation_pi_ana.py ============
+------------- test_data/100frames.dcd --------------
+
+Total 100 frames, selected PROA: 39 atoms, MEMB: 256 atoms
+Time usage: 
+ extract coordinates: 0.05s 
+ calculate distance matrix: 0.13s            
+ lifetime cutoff: 0.01s
+
+TYR-44: occupancy 78.00%, average contacts per frame 0.78
+TYR-46: occupancy 81.00%, average contacts per frame 0.81
+TYR-60: occupancy 75.00%, average contacts per frame 0.75
+PHE-63: occupancy 0.00%, average contacts per frame 0.00
+PHE-66: occupancy 0.00%, average contacts per frame 0.00
+TRP-118: occupancy 0.00%, average contacts per frame 0.00
+
+real	0m10.155s
+user	0m12.448s
+sys	0m1.405s
+----------------------------------------------------
+
+------------- test_data/500frames.dcd --------------
+
+Total 500 frames, selected PROA: 39 atoms, MEMB: 256 atoms
+Time usage: 
+ extract coordinates: 0.22s 
+ calculate distance matrix: 0.20s            
+ lifetime cutoff: 0.01s
+
+TYR-44: occupancy 28.00%, average contacts per frame 0.28
+TYR-46: occupancy 34.40%, average contacts per frame 0.35
+TYR-60: occupancy 23.00%, average contacts per frame 0.23
+PHE-63: occupancy 0.00%, average contacts per frame 0.00
+PHE-66: occupancy 0.00%, average contacts per frame 0.00
+TRP-118: occupancy 0.00%, average contacts per frame 0.00
+
+real	0m10.094s
+user	0m18.130s
+sys	0m2.848s
+----------------------------------------------------
+
+------------- /cluster/projects/nn4700k/dandan/md/last_50ns.dcd --------------
+
+Total 2501 frames, selected PROA: 39 atoms, MEMB: 256 atoms
+Time usage: 
+ extract coordinates: 1.10s 
+ calculate distance matrix: 0.66s            
+ lifetime cutoff: 0.01s
+
+TYR-44: occupancy 29.15%, average contacts per frame 0.29
+TYR-46: occupancy 42.10%, average contacts per frame 0.42
+TYR-60: occupancy 48.78%, average contacts per frame 0.50
+PHE-63: occupancy 0.00%, average contacts per frame 0.00
+PHE-66: occupancy 0.00%, average contacts per frame 0.00
+TRP-118: occupancy 0.00%, average contacts per frame 0.00
+
+real	0m11.439s
+user	0m59.554s
+sys	0m10.392s
+----------------------------------------------------
+
+------------- /cluster/projects/nn4700k/dandan/md/phospho_d_pure_popc_read.dcd --------------
+
+Total 10582 frames, selected PROA: 39 atoms, MEMB: 256 atoms
+Time usage: 
+ extract coordinates: 4.82s 
+ calculate distance matrix: 2.37s            
+ lifetime cutoff: 0.01s
+
+TYR-44: occupancy 31.54%, average contacts per frame 0.32
+TYR-46: occupancy 48.94%, average contacts per frame 0.49
+TYR-60: occupancy 53.70%, average contacts per frame 0.55
+PHE-63: occupancy 0.00%, average contacts per frame 0.00
+PHE-66: occupancy 0.00%, average contacts per frame 0.00
+TRP-118: occupancy 0.00%, average contacts per frame 0.00
+
+real	0m17.015s
+user	6m4.412s
+sys	0m4.614s
+----------------------------------------------------
+

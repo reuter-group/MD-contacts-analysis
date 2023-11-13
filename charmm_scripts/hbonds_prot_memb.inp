@@ -1,0 +1,67 @@
+*
+
+bomblev -2
+
+SET inp piplc_protmemb
+
+set begin 0
+
+set skip 1
+
+! protein topology and parameter
+open read card unit 10 name toppar_mass_orig/top_all36_prot.rtf
+read  rtf card unit 10
+
+open read card unit 20 name toppar_mass_orig/par_all36_prot.prm
+read para card unit 20 flex
+
+
+! lipids
+open read card unit 10 name toppar_mass_orig/top_all36_lipid.rtf
+read  rtf card unit 10 append
+
+open read card unit 20 name toppar_mass_orig/par_all36_lipid.prm
+read para card unit 20 append flex
+
+! Additional topologies and parameters for water and ions
+stream toppar_mass_orig/toppar_water_ions.str
+
+
+!Initial psf 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!puts @path/scr/@inp.dyna_desolv.psf when it is the beginning psf!
+!puts @path/scr/@out/@out.dyna_desolv.psf when it is a new psf   !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+open unit 1 card read name phosphod_bound_to_pure_popc.oldpsf
+read psf card unit 1
+close unit 1
+
+! Initial coordinates
+open unit 1 card read name phosphod_bound_to_pure_popc.crd
+read coor card unit 1
+close unit 1
+
+define main sele ( type n .or. type ca .or. type c .or. type o .or. type ot1 -
+                   .or. type ot2 .or. type ha* .or. type hn ) end
+define side sele ( ( .not. main ) .and. segid pro* ) end
+
+coor copy comp
+
+
+ACCeptors ADD SELECT RESN POPC .AND. type O* END 
+
+if @type eq bb define goodatomsa sele ( segid pro* .and. resi @resi .and. main ) end
+if @type eq sc define goodatomsa sele ( segid pro* .and. resi @resi .and. side ) end
+if @membtype eq phos define goodatomsb sele ( segid memb .and. type o1* ) end
+if @membtype eq gly define goodatomsb sele ( segid memb .and. type o2* ) end
+if @membtype eq head define goodatomsb sele ( segid memb .and. ( type oc* .or. type ho* ) ) end
+
+label seledone
+
+open read unformatted unit 10 name output/@dcd
+
+coor hbond cuthb 2.4 cutha 130 firstu 10 nunit 1 skip @skip -
+   begin @begin stop @{conf_n} -
+   sele goodatomsa end sele goodatomsb end -
+   verb tcut 0.05
+

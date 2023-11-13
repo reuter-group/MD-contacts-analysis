@@ -1,0 +1,23 @@
+{
+    "PSF_FILE": "test_data/phosphod_bound_to_pure_popc.old.psf",
+
+    "DCD_FILE": [
+        "test_data/500frames.dcd"
+    ],
+
+    "RESIDUE_FILE": "test_data/hydroph_candidates.txt",
+
+    "hbond_lipids": ["POPC", "POPE", "POPI", "POPS", "CHL1", "PSM", "SAPI24"],
+    "hydrophobic_lipids": ["POPC"],
+    "cation_pi_lipids": ["POPC", "POPE", "POPS", "SAPI24", "PSM"],    
+
+    "lifetime": 2, 
+    
+    "mem_limit": 6,
+
+    "start": 0,
+    "stop": null, 
+    "step": 1,
+
+    "output_file_prefix": ""
+}

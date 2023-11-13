@@ -1,0 +1,101 @@
+============ ./hydrophobic_ana.py ============
+------------- test_data/100frames.dcd --------------
+
+Total 100 frames, selected PROA: 93 atoms, MEMB: 26112 atoms
+Time usage: 
+ extract coordinates: 0.09s 
+ calculate distance matrix: 0.26s            
+ lifetime cutoff: 0.02s
+GLY-48 average contacts per frame: 0.00
+ILE-49 average contacts per frame: 0.32
+PRO-50 average contacts per frame: 1.81
+CYS-51 average contacts per frame: 0.00
+ASP-52 average contacts per frame: 0.00
+CYS-53 average contacts per frame: 0.00
+GLY-54 average contacts per frame: 0.00
+ARG-55 average contacts per frame: 0.00
+ASN-56 average contacts per frame: 0.00
+CYS-57 average contacts per frame: 0.00
+LYS-58 average contacts per frame: 0.00
+LYS-59 average contacts per frame: 0.00
+
+real	0m35.115s
+user	0m47.707s
+sys	0m6.965s
+----------------------------------------------------
+
+------------- test_data/500frames.dcd --------------
+
+Total 500 frames, selected PROA: 93 atoms, MEMB: 26112 atoms
+Time usage: 
+ extract coordinates: 0.41s 
+ calculate distance matrix: 5.28s            
+ lifetime cutoff: 0.04s
+GLY-48 average contacts per frame: 0.00
+ILE-49 average contacts per frame: 1.51
+PRO-50 average contacts per frame: 2.03
+CYS-51 average contacts per frame: 0.00
+ASP-52 average contacts per frame: 0.00
+CYS-53 average contacts per frame: 0.00
+GLY-54 average contacts per frame: 0.00
+ARG-55 average contacts per frame: 0.00
+ASN-56 average contacts per frame: 0.00
+CYS-57 average contacts per frame: 0.00
+LYS-58 average contacts per frame: 0.07
+LYS-59 average contacts per frame: 0.00
+
+real	0m40.933s
+user	1m10.982s
+sys	0m30.819s
+----------------------------------------------------
+
+------------- /cluster/projects/nn4700k/dandan/md/last_50ns.dcd --------------
+
+Total 2501 frames, selected PROA: 93 atoms, MEMB: 26112 atoms
+Time usage: 
+ extract coordinates: 2.02s 
+ calculate distance matrix: 5.29s            
+ lifetime cutoff: 0.28s
+GLY-48 average contacts per frame: 0.00
+ILE-49 average contacts per frame: 4.80
+PRO-50 average contacts per frame: 2.89
+CYS-51 average contacts per frame: 0.00
+ASP-52 average contacts per frame: 0.00
+CYS-53 average contacts per frame: 0.00
+GLY-54 average contacts per frame: 0.00
+ARG-55 average contacts per frame: 0.00
+ASN-56 average contacts per frame: 0.00
+CYS-57 average contacts per frame: 0.00
+LYS-58 average contacts per frame: 0.26
+LYS-59 average contacts per frame: 0.00
+
+real	0m46.368s
+user	4m7.882s
+sys	0m50.116s
+----------------------------------------------------
+
+------------- /cluster/projects/nn4700k/dandan/md/phospho_d_pure_popc_read.dcd --------------
+
+Total 10582 frames, selected PROA: 93 atoms, MEMB: 26112 atoms
+Time usage: 
+ extract coordinates: 8.38s 
+ calculate distance matrix: 6.36s            
+ lifetime cutoff: 2.94s
+GLY-48 average contacts per frame: 0.02
+ILE-49 average contacts per frame: 4.86
+PRO-50 average contacts per frame: 3.04
+CYS-51 average contacts per frame: 0.00
+ASP-52 average contacts per frame: 0.00
+CYS-53 average contacts per frame: 0.00
+GLY-54 average contacts per frame: 0.01
+ARG-55 average contacts per frame: 0.00
+ASN-56 average contacts per frame: 0.05
+CYS-57 average contacts per frame: 0.01
+LYS-58 average contacts per frame: 0.43
+LYS-59 average contacts per frame: 0.00
+
+real	1m7.945s
+user	20m32.719s
+sys	5m46.743s
+----------------------------------------------------
+

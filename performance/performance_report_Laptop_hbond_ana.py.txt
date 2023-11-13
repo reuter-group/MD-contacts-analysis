@@ -1,0 +1,121 @@
+============ ./hbond_ana.py  ============
+------------- test_data/100frames.dcd --------------
+Total 100 frames
+Time usage: 
+ - initialization(including atom seletion):2.74            
+ - finding out candidate hbonds: 0.42s            
+ - lifetime cutoff: 0.04s
+TYR-44 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+THR-45 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+TYR-46 Hbond occupancy: PHOSPHATE 0.68   GLYCEROL 0.00   HEADGROUP 0.00 
+HSD-47 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+GLY-48 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ILE-49 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+PRO-50 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-51 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ASP-52 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-53 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+GLY-54 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ARG-55 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ASN-56 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-57 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+LYS-58 Hbond occupancy: PHOSPHATE 0.18   GLYCEROL 0.00   HEADGROUP 0.00 
+LYS-59 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+TYR-60 Hbond occupancy: PHOSPHATE 0.19   GLYCEROL 0.00   HEADGROUP 0.00 
+GLU-61 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+
+real	0m5.818s
+user	0m5.545s
+sys	0m0.224s
+----------------------------------------------------
+
+------------- test_data/500frames.dcd --------------
+Total 500 frames
+Time usage: 
+ - initialization(including atom seletion):2.56            
+ - finding out candidate hbonds: 2.43s            
+ - lifetime cutoff: 0.08s
+TYR-44 Hbond occupancy: PHOSPHATE 0.26   GLYCEROL 0.00   HEADGROUP 0.00 
+THR-45 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+TYR-46 Hbond occupancy: PHOSPHATE 0.29   GLYCEROL 0.00   HEADGROUP 0.00 
+HSD-47 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+GLY-48 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ILE-49 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+PRO-50 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-51 Hbond occupancy: PHOSPHATE 0.13   GLYCEROL 0.00   HEADGROUP 0.00 
+ASP-52 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-53 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+GLY-54 Hbond occupancy: PHOSPHATE 0.27   GLYCEROL 0.00   HEADGROUP 0.00 
+ARG-55 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ASN-56 Hbond occupancy: PHOSPHATE 0.13   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-57 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+LYS-58 Hbond occupancy: PHOSPHATE 0.78   GLYCEROL 0.03   HEADGROUP 0.00 
+LYS-59 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+TYR-60 Hbond occupancy: PHOSPHATE 0.10   GLYCEROL 0.00   HEADGROUP 0.00 
+GLU-61 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+
+real	0m7.890s
+user	0m7.360s
+sys	0m0.404s
+----------------------------------------------------
+
+------------- local/last_50ns.dcd --------------
+Total 2501 frames
+Time usage: 
+ - initialization(including atom seletion):2.48            
+ - finding out candidate hbonds: 11.21s            
+ - lifetime cutoff: 0.23s
+TYR-44 Hbond occupancy: PHOSPHATE 0.02   GLYCEROL 0.00   HEADGROUP 0.00 
+THR-45 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+TYR-46 Hbond occupancy: PHOSPHATE 0.80   GLYCEROL 0.00   HEADGROUP 0.00 
+HSD-47 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+GLY-48 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ILE-49 Hbond occupancy: PHOSPHATE 0.37   GLYCEROL 0.00   HEADGROUP 0.00 
+PRO-50 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-51 Hbond occupancy: PHOSPHATE 0.32   GLYCEROL 0.00   HEADGROUP 0.00 
+ASP-52 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-53 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+GLY-54 Hbond occupancy: PHOSPHATE 0.02   GLYCEROL 0.00   HEADGROUP 0.00 
+ARG-55 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ASN-56 Hbond occupancy: PHOSPHATE 0.05   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-57 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+LYS-58 Hbond occupancy: PHOSPHATE 0.86   GLYCEROL 0.09   HEADGROUP 0.00 
+LYS-59 Hbond occupancy: PHOSPHATE 0.03   GLYCEROL 0.00   HEADGROUP 0.00 
+TYR-60 Hbond occupancy: PHOSPHATE 0.14   GLYCEROL 0.00   HEADGROUP 0.00 
+GLU-61 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+
+real	0m21.231s
+user	0m19.529s
+sys	0m1.294s
+----------------------------------------------------
+
+------------- local/phospho_d_pure_popc_read.dcd --------------
+Total 10582 frames
+Time usage: 
+ - initialization(including atom seletion):2.53            
+ - finding out candidate hbonds: 45.99s            
+ - lifetime cutoff: 0.17s
+TYR-44 Hbond occupancy: PHOSPHATE 0.15   GLYCEROL 0.00   HEADGROUP 0.00 
+THR-45 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+TYR-46 Hbond occupancy: PHOSPHATE 0.67   GLYCEROL 0.01   HEADGROUP 0.00 
+HSD-47 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+GLY-48 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ILE-49 Hbond occupancy: PHOSPHATE 0.22   GLYCEROL 0.00   HEADGROUP 0.00 
+PRO-50 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-51 Hbond occupancy: PHOSPHATE 0.45   GLYCEROL 0.00   HEADGROUP 0.00 
+ASP-52 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+CYS-53 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+GLY-54 Hbond occupancy: PHOSPHATE 0.20   GLYCEROL 0.00   HEADGROUP 0.00 
+ARG-55 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+ASN-56 Hbond occupancy: PHOSPHATE 0.07   GLYCEROL 0.02   HEADGROUP 0.00 
+CYS-57 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+LYS-58 Hbond occupancy: PHOSPHATE 0.71   GLYCEROL 0.08   HEADGROUP 0.00 
+LYS-59 Hbond occupancy: PHOSPHATE 0.08   GLYCEROL 0.00   HEADGROUP 0.00 
+TYR-60 Hbond occupancy: PHOSPHATE 0.22   GLYCEROL 0.00   HEADGROUP 0.00 
+GLU-61 Hbond occupancy: PHOSPHATE 0.00   GLYCEROL 0.00   HEADGROUP 0.00 
+
+real	1m39.960s
+user	1m34.742s
+sys	0m4.339s
+----------------------------------------------------
+

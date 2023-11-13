@@ -1,0 +1,115 @@
+bomblev -2
+
+
+
+! Code for this job
+
+set chain prot
+
+SET inp piplc_@{chain}memb  ! input file name
+
+
+
+calc stopdyna = @{conf_n} * @skip
+
+
+
+calc skipb = @skip * 100
+
+calc stopb = @{conf_n} / 100
+
+
+
+! Topology, parameters and PSF
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Topology, parameters and PSF
+!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! protein topology and parameter
+open read card unit 10 name toppar_mass_orig/top_all36_prot.rtf
+read  rtf card unit 10
+
+open read card unit 20 name toppar_mass_orig/par_all36_prot.prm
+read para card unit 20 flex
+
+
+! lipids
+open read card unit 10 name toppar_mass_orig/top_all36_lipid.rtf
+read  rtf card unit 10 append
+
+open read card unit 20 name toppar_mass_orig/par_all36_lipid.prm
+read para card unit 20 append flex
+
+! Additional topologies and parameters for water and ions
+stream toppar_mass_orig/toppar_water_ions.str
+
+
+
+!Initial psf 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!puts @path/scr/@inp.dyna_desolv.psf when it is the beginning psf!
+
+!puts @path/scr/@out/@out.dyna_desolv.psf when it is a new psf   !
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+open unit 1 card read name phosphod_bound_to_pure_popc.oldpsf
+
+read psf card unit 1
+
+close unit 1
+
+
+
+! Initial coordinates
+
+open unit 1 card read name phosphod_bound_to_pure_popc.crd
+
+read coor card unit 1
+
+close unit 1
+
+
+!open read unformatted unit 21 name output/phospho_d_pure_popc_read.dcd
+open read unformatted unit 21 name output/last_50ns.dcd
+
+
+
+trajectory iread 21 nread 1 skip @skip begin 0 stop @stopdyna
+
+
+
+set i 1
+
+label loop
+
+
+
+traj read
+
+
+
+define dmp sele ( resn popc .or. resn dmps ) .and. ( type n ) end
+
+if @resn eq phe define aromring sele ( segid pro* .and. resi @resi .and. ( type cg .or. type cd* .or. type ce* .or. type cz ) ) end
+
+if @resn eq tyr define aromring sele ( segid pro* .and. resi @resi .and. ( type cg .or. type cd* .or. type ce* .or. type cz ) ) end
+
+if @resn eq trp define aromring sele ( segid pro* .and. resi @resi .and. ( type cg .or. type cd* .or. type ce* .or. type cz* .or. type ch* .or. type ne1 ) ) end
+
+define close sele ( segid memb .and. ( dmp ) ) .and. ( ( aromring ) .around. 8 ) end
+
+
+
+print coor sele close end
+
+
+
+incr i by 1
+
+
+
+if @i lt @stopb GOTO loop
+
