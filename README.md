@@ -1,21 +1,22 @@
 # User Guide
 
+### Prerequisites
+- For installing the scripts, [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/) or Anaconda is required. 
+
 ### Step 1. Set up running environment
-
-- Download the source code and create the environment with `conda`
+1.1 Download the source code and create the conda environment 
 ```
+git clone https://github.com/reuter-group/MD-contacts-analysis.git
+cd /path/to/MD-contacts-analysis
 conda create -f md-ana-py37.yml
-
 ```
-- Activate the environment
+1.2 Activate the environment
 ```
-$ conda activate md-ana-py37
+conda activate md-ana-py37
 ```
-
 
 ### Step 2. Prepare a config file
-- the config file sets parameters for the analysis; check [detailed explanation of each parameter](./config_template.json)
-- an example config file `config_example.json`
+The config file sets parameters for the analysis; check [detailed explanation of each parameter](./config_template.json). An example config file `config_example.json`:
 ```
 {
     "PSF_FILE": "test_data/reza_data.psf",
@@ -42,7 +43,12 @@ $ conda activate md-ana-py37
 }
 ```
 
-### Step 3. Run one of the analysis scripts in command line: `hbond_ana.py`, `hydrophobic_ana.py`, or `cation_pi_ana.py`
+### Step 3. Run analysis script 
+Choose from one of the following scripts to run:
+- Hydrogen bonds: `hbond_ana.py`
+- Hydrophobic contacts: `hydrophobic_ana.py`
+- Cation-Pi interactions: `cation_pi_ana.py`
+
 ```bash
 (md-ana-py37) $ ./<analysis_code>  <configuration_file>
 
